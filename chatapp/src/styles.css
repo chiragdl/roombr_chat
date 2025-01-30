@@ -1,0 +1,42 @@
+/* styles.css */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+  }
+  
+  .shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  }
+  
+  .success-snackbar {
+    background: #4caf50;
+    color: white;
+  }
+  
+  /* Additional Material overrides for error states */
+  .mat-mdc-form-field.error-field .mat-mdc-text-field-wrapper {
+    background-color: rgba(244, 67, 54, 0.04);
+  }
+  
+  .mat-mdc-form-field.error-field .mdc-text-field--outlined {
+    --mdc-outlined-text-field-error-outline-color: #f44336;
+  }
+  
+  .centered-dialog .mat-dialog-container {
+    display: flex;
+    align-items: center; /* Vertically center the dialog */
+    justify-content: center; /* Horizontally center the dialog */
+    height: 100%; /* Ensure full height centering */
+  }
+  
+  .full-screen-dialog .mat-dialog-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+  }
